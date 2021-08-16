@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../views/header.ejs')%>
+
+<body>
+    <%- include('../views/nav.ejs')%>
+    <div class="details content">
+        <h2><%= post.title %></h2>
+        <div class="content">
+          <p><%= post.body %></p>
+        </div>
+        <form action="/posts/<%=post._id%>/delete" method="POST">
+            <button type="submit"> Delete</button>
+
+        </form>
+      </div>
+
+    <%- include('../views/footer.ejs')%>
+
+</body>
+</html>
