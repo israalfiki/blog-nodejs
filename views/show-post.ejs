@@ -11,8 +11,8 @@
         </div>
         <form action="/posts/<%=post._id%>/delete" method="POST">
             <button type="submit"> Delete</button>
-
         </form>
+        <button><a href="/posts/<%=post._id%>/edit">Edit</a></button>
       </div>
 
     <%- include('../views/footer.ejs')%>
