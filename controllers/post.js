@@ -16,7 +16,7 @@ exports.getPosts = (req, res) => {
 
 //create post
 exports.showCreatePost = (req, res) => {
-    res.render("../views/create-post.ejs", { title: "Create New Post" });
+    res.render("../views/posts/create-post.ejs", { title: "Create New Post" });
   }
 
 exports.createPost = (req, res) => {
@@ -41,7 +41,7 @@ exports.showPost = (req, res) => {
     const id = req.params.id;
     Post.findById(id)
       .then((post) => {
-        res.render("../views/show-post.ejs", { title: post.title, post: post });
+        res.render("../views/posts/show-post.ejs", { title: post.title, post: post });
       })
       .catch((err) => {
         console.log(err);
@@ -54,7 +54,7 @@ exports.showEditPost = (req, res) => {
     const id = req.params.id;
     Post.findById(id)
       .then((post) => {
-        res.render("../views/edit-post.ejs", {
+        res.render("../views/posts/edit-post.ejs", {
           title: "Edit a post",
           post: post,
         });

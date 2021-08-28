@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../views/header.ejs')%>
+    <%- include('../includes/header.ejs')%>
 
 <body>
-    <%- include('../views/nav.ejs')%>
+    <%- include('../includes/nav.ejs')%>
     <div class="details content">
         <h2><%= post.title %></h2>
         <div class="content">
@@ -15,7 +15,7 @@
         <button><a href="/posts/<%=post._id%>/edit">Edit</a></button>
       </div>
 
-    <%- include('../views/footer.ejs')%>
+    <%- include('../includes/footer.ejs')%>
 
 </body>
 </html>
